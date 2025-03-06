@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <!-- write the body here -->
-
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,7 +28,9 @@
 
     <script>
 
-
+// preventDefault() JavaScript ka ek method hai jo kisi event (jaise ke click, submit, keypress, etc.) 
+// ki default behavior ko rokta hai. Jab aap preventDefault() ko call karte hain, to event apna normal behavior perform nahi karta. 
+// Iska matlab hai ke agar kisi form ko submit karne par page reload hona hota hai, to preventDefault() us reload ko rok dega.
         document.getElementById("form").addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -49,7 +38,7 @@
             const name = document.getElementById("name").value;
             const age = document.getElementById("age").value;
 
-        
+            // abb mai yaha pe validation bhi lga diya hu taki user usse empty na rkhe ok
             if (name === "" || age === "") {
                 alert("plaes fill");
                 return
@@ -69,14 +58,14 @@
                 }, 5000);
             });
             myPromise.then(() => {
-                alert(Welcome, ${name}. You can vote.);
+                alert(`Welcome, ${name}. You can vote.`);
             }).catch(() => {
-                alert(Oh sorry, ${name}. You aren't old enough.);
+                alert(`Oh sorry, ${name}. You aren't old enough.`);
             });
         });
 
 
-                                
+// abb yee mera code     ok hai                                  
     </script>
 </body>
 
